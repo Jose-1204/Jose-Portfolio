@@ -7,19 +7,10 @@ export const projects = [
       en: "CRUD ticket management system with implementation of saving in MongoDB Atlas NoSQL Database.",
     },
     githubLink: "https://github.com/Jose-1204/ticket-system",
+    renderLink: "https://ticket-system-37ac.onrender.com",
     techStack: ["JavaScript", "Node.js", "HTML", "CSS", "MongoDB"],
     image:
-      "https://b2core.com/app/uploads/2024/04/How-to-Create-a-Ticketing-System.png",
+      "https://storage.screenshotapi.net/ticket_system_37ac_onrender_com__9b2a80f0bea3.png",
   },
-  {
-    id: 2,
-    title: "Proyecto 2",
-    description: {
-      es: "Otra descripción breve en español.",
-      en: "Another brief description in English.",
-    },
-    githubLink: "https://github.com/usuario/proyecto2",
-    techStack: ["Tailwind", "Firebase", "MongoDB", "Express", "Postman"],
-    image: "https://via.placeholder.com/150", // Reemplaza con otra URL real
-  },
+  
 ];

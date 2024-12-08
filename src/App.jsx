@@ -107,8 +107,14 @@ const App = () => {
                 <h3>{project.title}</h3>
                 <p>{project.description[language]}</p>
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                  Ver en GitHub
+                   GitHub
                 </a>
+                <button>
+                <a href={project.renderLink} target="_blank" rel="noopener noreferrer">
+                  Website
+                </a>
+
+                </button>
                 <div className="project-tech">
                   <h4>{content[language].techUsed}</h4>
                   <ul>
