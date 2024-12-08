@@ -1,0 +1,426 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Estilos globales */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabecera */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+} 
+header .header-icons {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre los íconos */
+} 
+header .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;  /* Aumento el tamaño del icono */
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+} 
+header .social-icon i {
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+} 
+header .social-icon:hover {
+  transform: scale(1.1);
+  background-color: #6a11cb; /* Cambia el fondo al hacer hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+} 
+header .social-icon:hover i {
+  color: white; /* Cambia el color del ícono al hacer hover */
+} 
+header .social-icon.linkedin {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.png');
+  background-size: cover;
+  background-position: center;
+}
+
+header .social-icon.github {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+header .social-icon.gmail {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Gmail_Icon.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.language-toggle {
+  background-color: #4caf50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  cursor: pointer; /* Indicador de clic */
+  transition: all 0.3s ease; /* Suavizar las transiciones */
+  margin-left: 20px; /* Espaciado entre botones */
+}
+
+.language-toggle:hover {
+  background-color: #45a049; /* Color de fondo al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transform: scale(1.05); /* Ligeramente más grande */
+}
+
+.language-toggle:focus {
+  outline: none; /* Sin borde de foco */
+}
+
+/* Skills */
+#skills {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); /*tamano de las skills */
+  gap: 1rem;
+  padding: 32px;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #ffffff, #e6e6fa);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card img {
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  filter: brightness(0.8);
+}
+
+.skill-card p {
+  margin: 0;
+  color: #281616;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.dark .skill-card {
+  background: linear-gradient(135deg, #6942cc, #1c1c1c);
+  color: #f9f9f9;
+}
+
+.dark .skill-card img {
+  filter: brightness(1.2);
+}
+
+
+header .theme-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+header .theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenedor principal */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: calc(100vh - 200px);
+  justify-content: center;
+  align-items: stretch;
+  padding: 2rem;
+}
+
+/* Sección genérica */
+section {
+  padding: 2rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff, #e6e6fa);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sobre mí */
+#about {
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+  color: #6a11cb;
+}
+
+/* Proyectos */
+#projects {
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #2575fc;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Recuerdos pequeños en la parte superior */
+#projects .small-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  
+}
+
+.small-card {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 1rem;
+  border-radius: 50%;
+  width: 70px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.small-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.project-tech {
+  margin-top: 1rem;
+  /* text-align: left; */
+  
+}
+.project-tech h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-tech ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-tech li {
+  background: #f0f8ff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #2575fc;
+  text-align: center;
+}
+
+.dark .project-tech li {
+  background: #333;
+  color: #66fcf1;
+}
+
+/* Contacto */
+#contact {
+  text-align: center;
+}
+
+#contact a {
+  color: #2575fc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#contact a:hover {
+  color: #6a11cb;
+  text-decoration: underline;
+}
+/* Sección Redes Sociales */
+#social {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#social h2 {
+  margin-bottom: 1rem;
+  color: #6a11cb;
+}
+
+/* Estilo de los recuadros de los íconos */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f1f1f1; /* Color de fondo por defecto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.social-icon i {
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* Hover para cada ícono */
+.social-icon:hover {
+  transform: scale(1.1);
+  background-color: #6a11cb; /* Cambia el fondo al hacer hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover i {
+  color: white; /* Cambia el color del ícono al hacer hover */
+}
+
+/* Estilos para cada red social */
+.social-icon.linkedin {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.social-icon.github {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.social-icon.gmail {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Gmail_Icon.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema oscuro */
+.dark {
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #f9f9f9;
+}
+
+.dark header {
+  background: linear-gradient(90deg, #000428, #004e92);
+}
+
+.dark section {
+  background: linear-gradient(135deg, #2c2c2c, #1c1c1c);
+}
+
+.dark footer {
+  background: linear-gradient(90deg, #000428, #004e92);
+}
+
+.dark .project-card {
+  background: linear-gradient(135deg, #333, #444);
+  color: #f9f9f9;
+}
+
+.dark .project-card h3 {
+  color: #66fcf1;
+}
+
+.dark #contact a {
+  color: #66fcf1;
+}
