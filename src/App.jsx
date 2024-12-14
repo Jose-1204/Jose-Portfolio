@@ -176,6 +176,7 @@ const App = () => {
                 )}
                 <h3>{project.title}</h3>
                 <p>{project.description[language]}</p>
+                <button>
                 <a
                   href={project.githubLink}
                   target="_blank"
@@ -183,6 +184,7 @@ const App = () => {
                 >
                   GitHub
                 </a>
+                </button>
                 <button>
                   <a
                     href={project.renderLink}
