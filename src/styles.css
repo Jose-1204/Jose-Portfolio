@@ -8,7 +8,7 @@
 
 /* Estilos globales */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
   color: #333;
   line-height: 1.6;
@@ -34,50 +34,50 @@ header .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-} 
+}
 header .header-icons {
   display: flex;
-  gap: 1.5rem; 
-} 
+  gap: 1.5rem;
+}
 header .social-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;  
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #f1f1f1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
   cursor: pointer;
-} 
+}
 header .social-icon i {
   font-size: 1.5rem;
   color: #333;
   transition: color 0.3s;
-} 
+}
 header .social-icon:hover {
   transform: scale(1.1);
-  background-color: #6a11cb; 
+  background-color: #6a11cb;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-} 
+}
 header .social-icon:hover i {
-  color: white; 
-} 
+  color: white;
+}
 header .social-icon.linkedin {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.png');
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.png");
   background-size: cover;
   background-position: center;
 }
 
 header .social-icon.github {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg");
   background-size: cover;
   background-position: center;
 }
 
 header .social-icon.gmail {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Gmail_Icon.jpg');
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Gmail_Icon.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -87,28 +87,28 @@ header h1 {
 }
 
 .language-toggle {
-  background-color: #4e5c8f; 
-  color: white; 
-  border: none; 
-  border-radius: 10px; 
+  background-color: #4e5c8f;
+  color: white;
+  border: none;
+  border-radius: 10px;
   padding: 10px -20px;
   width: 50%;
-  font-size: 16px; 
-  font-weight: bold; 
-  cursor: pointer; 
-  transition: all 0.3s ease; 
-  margin-left: 10px; 
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
   margin-right: 5px;
 }
 
 .language-toggle:hover {
-  background-color: #3d54ae; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.05); 
+  background-color: #3d54ae;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .language-toggle:focus {
-  outline: none; 
+  outline: none;
 }
 
 /* Skills */
@@ -119,10 +119,12 @@ header h1 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); /*tamano de las skills */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(128px, 1fr)
+  ); /*tamano de las skills */
   gap: 1rem;
   padding: 32px;
-  
 }
 
 .skill-card {
@@ -133,7 +135,6 @@ header h1 {
   text-align: center;
   font-size: 0.8rem;
   transition: transform 0.3s, box-shadow 0.3s;
-  
 }
 
 .skill-card:hover {
@@ -164,7 +165,6 @@ header h1 {
   filter: brightness(1.2);
 }
 
-
 header .theme-toggle {
   background: none;
   border: 2px solid white;
@@ -186,7 +186,6 @@ header .theme-toggle:hover {
   transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 
 /* Contenedor principal */
 main {
@@ -253,7 +252,6 @@ section {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  
 }
 
 .small-card {
@@ -275,7 +273,6 @@ section {
 }
 .project-tech {
   margin-top: 1rem;
-    
 }
 .project-tech h4 {
   font-size: 0.9rem;
@@ -349,7 +346,7 @@ section {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #f1f1f1; 
+  background-color: #f1f1f1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
   cursor: pointer;
@@ -364,33 +361,32 @@ section {
 /* Hover para cada icono */
 .social-icon:hover {
   transform: scale(1.1);
-  background-color: #6a11cb; 
+  background-color: #6a11cb;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-icon:hover i {
-  color: white; 
+  color: white;
 }
 
 /* Estilos para cada red social */
 .social-icon.linkedin {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.png');
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.png");
   background-size: cover;
   background-position: center;
 }
 
 .social-icon.github {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg");
   background-size: cover;
   background-position: center;
 }
 
 .social-icon.gmail {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Gmail_Icon.jpg');
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Gmail_Icon.jpg");
   background-size: cover;
   background-position: center;
 }
-
 
 /* Pie de pagina */
 footer {

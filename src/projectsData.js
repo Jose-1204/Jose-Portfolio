@@ -12,5 +12,4 @@ export const projects = [
     image:
       "https://storage.screenshotapi.net/ticket_system_37ac_onrender_com__9b2a80f0bea3.png",
   },
-  
 ];
