@@ -32,7 +32,7 @@ const App = () => {
       header: "Jose Fuentes",
       aboutTitle: "About Me",
       aboutText:
-        "JavaScript Back-End Developer Jr. with experience in Node.js and databases such as MongoDB, MySQL, PostgreSQL and Firebase. My main focus is back-end development, where I enjoy solving complex challenges, continuously learning, and ensuring code quality. Although my specialty is the back-end, I have basic front-end knowledge that allows me to collaborate comprehensively on projects. . I am motivated by constant learning, teamwork and the implementation of good practices, always seeking to add value and improve day by day.",
+        "JavaScript Back-End Developer Jr. with experience in Node.js and databases such as MongoDB, MySQL, PostgreSQL and Firebase. My main focus is back-end development, where I enjoy solving complex challenges, continuously learning, and ensuring code quality. Although my specialty is the back-end, I have basic front-end knowledge that allows me to collaborate comprehensively on projects. I am motivated by constant learning, teamwork and the implementation of good practices, always seeking to add value and improve day by day.",
       skillsTitle: "Skills and Technologies",
       projectsTitle: "Projects",
       projectDescription: "Brief description of the project.",
@@ -123,7 +123,7 @@ const App = () => {
               },
               {
                 name: "Express.js",
-                img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+                img: "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-thumbnail.png",
               },
               {
                 name: "React.js",
@@ -181,13 +181,13 @@ const App = () => {
                 <h3>{project.title}</h3>
                 <p>{project.description[language]}</p>
                 <button>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
                 </button>
                 <button>
                   <a
