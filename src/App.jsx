@@ -102,6 +102,10 @@ const App = () => {
                 img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
               },
               {
+                name: "TypeScript",
+                img: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+              },
+              {
                 name: "HTML",
                 img: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
               },
