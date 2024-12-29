@@ -19,7 +19,7 @@ const App = () => {
       header: "Jose Fuentes ",
       aboutTitle: "Sobre mí",
       aboutText:
-        "JavaScript Back-End Developer Jr. con experiencia en Node.js y bases de datos como MongoDB, MySQL, PostgreSQL y Firebase. Mi enfoque principal es el desarrollo back-end, donde disfruto resolver desafíos complejos, aprender continuamente y asegurar la calidad del código.Aunque mi especialidad es el back-end, tengo conocimientos básicos de front-end que me permiten colaborar de manera integral en proyectos. Me motiva el aprendizaje constante, el trabajo en equipo y la implementación de buenas prácticas, siempre buscando aportar valor y mejorar día a día.",
+        "Full stack Developer . con experiencia en JavaScript, TypeScript, Node.js React.js y bases de datos como MongoDB, MySQL, PostgreSQL y Firebase. Mi enfoque principal es el desarrollo back-end, donde disfruto resolver desafíos complejos, aprender continuamente y asegurar la calidad del código.Aunque mi pasión es el back-end, tengo conocimientos de front-end que me permiten colaborar de manera integral en proyectos. Me motiva el aprendizaje constante, el trabajo en equipo y la implementación de buenas prácticas, siempre buscando aportar valor y mejorar día a día.",
       skillsTitle: "Habilidades y Tecnologías",
       projectsTitle: "Proyectos",
       projectDescription: "Descripción breve del proyecto.",
@@ -32,7 +32,7 @@ const App = () => {
       header: "Jose Fuentes",
       aboutTitle: "About Me",
       aboutText:
-        "JavaScript Back-End Developer Jr. with experience in Node.js and databases such as MongoDB, MySQL, PostgreSQL and Firebase. My main focus is back-end development, where I enjoy solving complex challenges, continuously learning, and ensuring code quality. Although my specialty is the back-end, I have basic front-end knowledge that allows me to collaborate comprehensively on projects. I am motivated by constant learning, teamwork and the implementation of good practices, always seeking to add value and improve day by day.",
+        "Full stack Developer. with experience in JavaScript, TypeScript, Node.js React.js and databases such as MongoDB, MySQL, PostgreSQL and Firebase. My main focus is back-end development, where I enjoy solving complex challenges, continuously learning, and ensuring code quality. Although my pasion is the back-end, I have front-end knowledge that allows me to collaborate comprehensively on projects. I am motivated by constant learning, teamwork and the implementation of good practices, always seeking to add value and improve day by day.",
       skillsTitle: "Skills and Technologies",
       projectsTitle: "Projects",
       projectDescription: "Brief description of the project.",
