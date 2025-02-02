@@ -112,52 +112,47 @@ header h1 {
 }
 
 /* Skills */
-#skills {
-  text-align: center;
-  padding: 2rem 0;
-}
-
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(128px, 1fr)
-  ); /*tamano de las skills */
-  gap: 1rem;
-  padding: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 5%;
 }
 
 .skill-card {
-  background: linear-gradient(135deg, #ffffff, #e6e6fa);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-size: 0.8rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--skill-card-bg-light);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .skill-card img {
-  max-width: 60px;
-  height: auto;
-  margin-bottom: 0.5rem;
-  filter: brightness(0.8);
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: grayscale(25%);
 }
 
 .skill-card p {
-  margin: 0;
-  color: #281616;
-  font-weight: bold;
   font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: center;
 }
 
 .dark .skill-card {
-  background: linear-gradient(135deg, #6942cc, #1c1c1c);
+  background: linear-gradient(135deg, #075fc3, #1c1c1c);
   color: #f9f9f9;
 }
 
@@ -214,111 +209,114 @@ section {
 
 #about h2 {
   margin-bottom: 1rem;
-  color: #6a11cb;
+  color: #1c1c92;
 }
 
 /* Proyectos */
 #projects {
-  text-align: center;
+  padding: 2rem 0;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 .project-card {
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #333;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card h3 {
-  margin-bottom: 0.5rem;
-  color: #d6ccc3;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#projects .small-cards {
+.project-header {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.small-card {
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  padding: 1rem;
-  border-radius: 50%;
-  width: 70px;
-  height: 10px;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-button {
-  background: linear-gradient(135deg, #9877b6, #0e0116); /* Color morado suave para un efecto sofisticado */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all .3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: auto;
-  margin: 20px;
+  margin-bottom: 1rem;
 }
 
-button:hover {
-  background: linear-gradient(135deg, #8a0ce4, #0e011b); /* Morado más oscuro para el hover y un contraste más fuerte */
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+.project-header h3 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.25rem;
 }
 
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+}
 
-.small-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-.project-tech {
-  margin-top: 1rem;
-}
-.project-tech h4 {
+.github-button, .demo-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.project-tech ul {
+.github-button {
+  background: linear-gradient(135deg, #2b3137, #181c20);
+  color: white !important;
+}
+
+.demo-button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white !important;
+}
+
+.project-description {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  min-height: 80px;
+}
+
+.tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-top: 1rem;
 }
 
-.project-tech li {
-  background: #f0f8ff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
+.tech-tag {
+  background: var(--tag-bg);
+  color: var(--tag-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
   font-size: 0.8rem;
-  color: #2575fc;
-  text-align: center;
+  font-weight: 500;
+  border: 1px solid var(--tag-border);
 }
 
-.dark .project-tech li {
-  background: #333;
-  color: #66fcf1;
+/* Tema oscuro */
+.dark .project-card {
+  --card-bg: #2d2d2d;
+  --border-color: #404040;
+  --tag-bg: rgba(76, 175, 80, 0.15);
+  --tag-color: #4CAF50;
+  --tag-border: #4CAF50;
+}
+
+/* Tema claro */
+.light .project-card {
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --tag-bg: rgba(76, 175, 80, 0.1);
+  --tag-color: #2e7d32;
+  --tag-border: #4CAF50;
 }
 
 /* Contacto */

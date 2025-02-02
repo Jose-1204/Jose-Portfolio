@@ -106,6 +106,10 @@ const App = () => {
                 img: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
               },
               {
+                name: "Python",
+                img: "https://imgs.search.brave.com/Gc4o0TZByHDXOrUog0t60tOvt-BmVp3pOLjo8FdPnCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MTUyZmNlZjEw/MTRjMGI1ZTQ5Njcu/cG5n",
+              },
+              {
                 name: "HTML",
                 img: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
               },
@@ -120,6 +124,10 @@ const App = () => {
               {
                 name: "Node.js",
                 img: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+              },
+              {
+                name: "Flask",
+                img: "https://imgs.search.brave.com/Oo81WTaevpn16i-DrCZPR8NC9qGC5ldklhY7QU2AmOA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5na2V5LmNvbS9w/bmcvZGV0YWlsLzk4/LTk4NTAzMl9mbGFz/ay1sb2dvLWZsYXNr/LXB5dGhvbi1pY29u/LnBuZw",
               },
               {
                 name: "Express.js",
@@ -167,49 +175,47 @@ const App = () => {
         </section>
 
         <section id="projects">
-          <h2>{content[language].projectsTitle}</h2>
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <div key={project.id} className="project-card">
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-image"
-                  />
-                )}
-                <h3>{project.title}</h3>
-                <p>{project.description[language]}</p>
-                <button>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </button>
-                <button>
-                  <a
-                    href={project.renderLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Website
-                  </a>
-                </button>
-                <div className="project-tech">
-                  <h4>{content[language].techUsed}</h4>
-                  <ul>
-                    {project.techStack.map((tech, index) => (
-                      <li key={index}>{tech}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+  <h2>{content[language].projectsTitle}</h2>
+  <div className="projects-grid">
+    {projects.map((project) => (
+      <div key={project.id} className="project-card">
+        <div className="project-header">
+          <h3>{project.title}</h3>
+          <div className="project-links">
+            <a
+              href={project.githubLink}
+              className="github-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-github"></i> GitHub
+            </a>
+            {project.renderLink && (
+              <a
+                href={project.renderLink}
+                className="demo-button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fas fa-external-link-alt"></i> {content[language].demo}
+              </a>
+            )}
+          </div>
+        </div>
+        
+        <p className="project-description">{project.description[language]}</p>
+        
+        <div className="project-tech">
+          <div className="tech-tags">
+            {project.techStack.map((tech, index) => (
+              <span key={index} className="tech-tag">{tech}</span>
             ))}
           </div>
-        </section>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
         <section id="contact">
           <h2>{content[language].contactTitle}</h2>
