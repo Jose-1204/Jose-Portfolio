@@ -112,6 +112,11 @@ header h1 {
 }
 
 /* Skills */
+.skills-title {
+  text-align: center;
+  padding-bottom: 14px;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -258,10 +263,10 @@ section {
 .github-button, .demo-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -296,7 +301,7 @@ section {
   color: var(--tag-color);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   border: 1px solid var(--tag-border);
 }

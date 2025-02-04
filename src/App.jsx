@@ -16,31 +16,25 @@ const App = () => {
 
   const content = {
     es: {
-      header: "Jose Fuentes ",
+      header: "Jose Fuentes",
       aboutTitle: "Sobre mí",
-      aboutText:
-        "Full stack Developer. con experiencia en JavaScript, TypeScript, Node.js React.js y bases de datos como MongoDB, MySQL, PostgreSQL y Firebase. Disfruto resolver desafíos complejos, aprender continuamente y asegurar la calidad del código.Aunque mi pasión es el back-end, tengo conocimientos de front-end que me permiten colaborar de manera integral en proyectos. Me motiva el aprendizaje constante, el trabajo en equipo y la implementación de buenas prácticas, siempre buscando aportar valor y mejorar día a día.",
-      skillsTitle: "Habilidades y Tecnologías",
-      projectsTitle: "Proyectos",
-      projectDescription: "Descripción breve del proyecto.",
-      techUsed: "Tecnologías usadas:",
+      aboutText: `Desarrollador Full Stack con experiencia en JavaScript, TypeScript, Python, Flask, Node.js, React.js y bases de datos (MongoDB, MySQL, PostgreSQL, Firebase). Especializado en resolver desafíos técnicos complejos y asegurar calidad de código. Mi enfoque principal es back-end, pero domino front-end para colaborar en proyectos integrales. Motivo mi trabajo con aprendizaje continuo, buenas prácticas y trabajo en equipo.`,
+      skillsTitle: "Habilidades Técnicas",
+      projectsTitle: "Proyectos Destacados",
+      techUsed: "Tecnologías:",
       contactTitle: "Contacto",
-      contactText:
-        "Mira mi LinkedIn, accede a mis repositorios de GitHub o contáctame a través de mi correo",
+      contactText: "Conectemos en LinkedIn, revisa mi GitHub o escríbeme directamente:"
     },
     en: {
       header: "Jose Fuentes",
       aboutTitle: "About Me",
-      aboutText:
-        "Full stack Developer. with experience in JavaScript, TypeScript, Node.js React.js and databases such as MongoDB, MySQL, PostgreSQL and Firebase. I enjoy solving complex challenges, continuously learning, and ensuring code quality. Although my pasion is the back-end, I have front-end knowledge that allows me to collaborate comprehensively on projects. I am motivated by constant learning, teamwork and the implementation of good practices, always seeking to add value and improve day by day.",
-      skillsTitle: "Skills and Technologies",
-      projectsTitle: "Projects",
-      projectDescription: "Brief description of the project.",
-      techUsed: "Technologies used:",
+      aboutText: `Full Stack Developer skilled in JavaScript, TypeScript, Python, Flask, Node.js, React.js, and databases (MongoDB, MySQL, PostgreSQL, Firebase). Specialized in solving complex technical challenges and ensuring code quality. While my primary focus is back-end, I master front-end to deliver comprehensive solutions. Driven by continuous learning, best practices, and collaborative teamwork.`,
+      skillsTitle: "Technical Skills",
+      projectsTitle: "Featured Projects",
+      techUsed: "Technologies:",
       contactTitle: "Contact",
-      contactText:
-        "Check out my LinkedIn, access my GitHub repositories, or contact me via email",
-    },
+      contactText: "Let's connect on LinkedIn, check my GitHub, or email me directly:"
+    }
   };
 
   return (
@@ -94,7 +88,7 @@ const App = () => {
         </section>
 
         <section id="skills">
-          <h2>{content[language].skillsTitle}</h2>
+          <h2 className="skills-title">{content[language].skillsTitle}</h2>
           <div className="skills-grid">
             {[
               {
