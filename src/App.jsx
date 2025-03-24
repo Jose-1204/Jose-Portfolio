@@ -120,8 +120,8 @@ const App = () => {
                 img: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
               },
               {
-                name: "Flask",
-                img: "https://imgs.search.brave.com/Oo81WTaevpn16i-DrCZPR8NC9qGC5ldklhY7QU2AmOA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5na2V5LmNvbS9w/bmcvZGV0YWlsLzk4/LTk4NTAzMl9mbGFz/ay1sb2dvLWZsYXNr/LXB5dGhvbi1pY29u/LnBuZw",
+                name: "Jira",
+                img: "https://imgs.search.brave.com/9hL04QgNTr07_GwCHnvQwSMHUe489mleVXL4V1shyB0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWMt/Y2RuLmF0bGFzc2lh/bi5jb20vZGFtL2pj/cjpmYTAxNzU2ZC02/ZGNjLTQ1ZDEtODNh/Yi02OTZmYmZlYjA3/NGYvSmlyYS1pY29u/LWJsdWUuc3ZnP2Nk/blZlcnNpb249MjYy/OA",
               },
               {
                 name: "Express.js",
