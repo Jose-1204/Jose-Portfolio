@@ -18,7 +18,7 @@ const App = () => {
     es: {
       header: "Jose Fuentes",
       aboutTitle: "Sobre mí",
-      aboutText: `Desarrollador Full Stack con experiencia en JavaScript, C#, Python, Flask, Node.js, React.js y bases de datos (MongoDB, MySQL, PostgreSQL, SQL Server). Especializado en resolver desafíos técnicos complejos y asegurar calidad de código. Mi enfoque principal es back-end, pero domino front-end para colaborar en proyectos integrales. Motivo mi trabajo con aprendizaje continuo, buenas prácticas y trabajo en equipo.`,
+      aboutText: `Desarrollador Full Stack con experiencia en JavaScript, Python, Flask, Node.js, React.js y bases de datos (MongoDB, MySQL, PostgreSQL). Especializado en resolver desafíos técnicos complejos y asegurar calidad de código. Mi enfoque principal es back-end, pero domino front-end para colaborar en proyectos integrales. Motivo mi trabajo con aprendizaje continuo, buenas prácticas y trabajo en equipo.`,
       skillsTitle: "Habilidades Técnicas",
       projectsTitle: "Proyectos Destacados",
       techUsed: "Tecnologías:",
@@ -28,7 +28,7 @@ const App = () => {
     en: {
       header: "Jose Fuentes",
       aboutTitle: "About Me",
-      aboutText: `Full Stack Developer skilled in JavaScript, C#, Python, Flask, Node.js, React.js, and databases (MongoDB, MySQL, PostgreSQL, SQL Server). Specialized in solving complex technical challenges and ensuring code quality. While my primary focus is back-end, I master front-end to deliver comprehensive solutions. Driven by continuous learning, best practices, and collaborative teamwork.`,
+      aboutText: `Full Stack Developer skilled in JavaScript, Python, Flask, Node.js, React.js, and databases (MongoDB, MySQL, PostgreSQL). Specialized in solving complex technical challenges and ensuring code quality. While my primary focus is back-end, I master front-end to deliver comprehensive solutions. Driven by continuous learning, best practices, and collaborative teamwork.`,
       skillsTitle: "Technical Skills",
       projectsTitle: "Featured Projects",
       techUsed: "Technologies:",
@@ -96,10 +96,6 @@ const App = () => {
                 img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
               },
               {
-                name: "C#",
-                img: "https://imgs.search.brave.com/R356HJQMT5K8Rl1mEkPs46g2lqnJTt45lCmQfx9aGYc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC9jLXNoYXJw/LWMtaWNvbi05MTJ4/MTAyNC1qM3lpZHcz/Ny5wbmc",
-              },
-              {
                 name: "Python",
                 img: "https://imgs.search.brave.com/Gc4o0TZByHDXOrUog0t60tOvt-BmVp3pOLjo8FdPnCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MTUyZmNlZjEw/MTRjMGI1ZTQ5Njcu/cG5n",
               },
@@ -134,10 +130,6 @@ const App = () => {
               {
                 name: "MongoDB",
                 img: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg",
-              },
-              {
-                name: "Firebase",
-                img: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg",
               },
               {
                 name: "MySQL",
