@@ -1,10 +1,25 @@
 import { useState } from "react";
 import "./styles.css";
-import { projects } from "./projectsData";
+import { projects, Project } from "./projectsData";
+
+type Theme = "light" | "dark";
+type Language = "es" | "en";
+
+interface Content {
+  header: string;
+  aboutTitle: string;
+  aboutText: string;
+  skillsTitle: string;
+  projectsTitle: string;
+  techUsed: string;
+  contactTitle: string;
+  contactText: string;
+  demo?: string;
+}
 
 const App = () => {
-  const [theme, setTheme] = useState("dark");
-  const [language, setLanguage] = useState("es"); // Idioma por defecto: español
+  const [theme, setTheme] = useState<Theme>("dark");
+  const [language, setLanguage] = useState<Language>("es"); 
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -14,7 +29,7 @@ const App = () => {
     setLanguage((prevLanguage) => (prevLanguage === "es" ? "en" : "es"));
   };
 
-  const content = {
+  const content: Record<Language, Content> = {
     es: {
       header: "Jose Fuentes",
       aboutTitle: "Sobre mí",
@@ -23,7 +38,9 @@ const App = () => {
       projectsTitle: "Proyectos Destacados",
       techUsed: "Tecnologías:",
       contactTitle: "Contacto",
-      contactText: "Conectemos en LinkedIn, revisa mi GitHub o escríbeme directamente:"
+      contactText:
+        "Conectemos en LinkedIn, revisa mi GitHub o escríbeme directamente:",
+      demo: "Demo",
     },
     en: {
       header: "Jose Fuentes",
@@ -33,8 +50,10 @@ const App = () => {
       projectsTitle: "Featured Projects",
       techUsed: "Technologies:",
       contactTitle: "Contact",
-      contactText: "Let's connect on LinkedIn, check my GitHub, or email me directly:"
-    }
+      contactText:
+        "Let's connect on LinkedIn, check my GitHub, or email me directly:",
+      demo: "Demo",
+    },
   };
 
   return (
@@ -117,7 +136,7 @@ const App = () => {
               },
               {
                 name: "Jira",
-                img: "https://imgs.search.brave.com/9hL04QgNTr07_GwCHnvQwSMHUe489mleVXL4V1shyB0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWMt/Y2RuLmF0bGFzc2lh/bi5jb20vZGFtL2pj/cjpmYTAxNzU2ZC02/ZGNjLTQ1ZDEtODNh/Yi02OTZmYmZlYjA3/NGYvSmlyYS1pY29u/LWJsdWUuc3ZnP2Nk/blZlcnNpb249MjYy/OA",
+                img: "https://wac-cdn.atlassian.com/dam/jcr:fa01756d-6dcc-45d1-83ab-696fbfeb074f/Jira-icon-blue.svg",
               },
               {
                 name: "Express.js",
@@ -161,47 +180,52 @@ const App = () => {
         </section>
 
         <section id="projects">
-  <h2>{content[language].projectsTitle}</h2>
-  <div className="projects-grid">
-    {projects.map((project) => (
-      <div key={project.id} className="project-card">
-        <div className="project-header">
-          <h3>{project.title}</h3>
-          <div className="project-links">
-            <a
-              href={project.githubLink}
-              className="github-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-github"></i> GitHub
-            </a>
-            {project.renderLink && (
-              <a
-                href={project.renderLink}
-                className="demo-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-external-link-alt"></i> {content[language].demo}
-              </a>
-            )}
-          </div>
-        </div>
-        
-        <p className="project-description">{project.description[language]}</p>
-        
-        <div className="project-tech">
-          <div className="tech-tags">
-            {project.techStack.map((tech, index) => (
-              <span key={index} className="tech-tag">{tech}</span>
+          <h2>{content[language].projectsTitle}</h2>
+          <div className="projects-grid">
+            {projects.map((project: Project) => (
+              <div key={project.id} className="project-card">
+                <div className="project-header">
+                  <h3>{project.title}</h3>
+                  <div className="project-links">
+                    <a
+                      href={project.githubLink}
+                      className="github-button"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fab fa-github"></i> GitHub
+                    </a>
+                    {project.renderLink && (
+                      <a
+                        href={project.renderLink}
+                        className="demo-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fas fa-external-link-alt"></i>{" "}
+                        {content[language].demo}
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <p className="project-description">
+                  {project.description[language]}
+                </p>
+
+                <div className="project-tech">
+                  <div className="tech-tags">
+                    {project.techStack.map((tech, index) => (
+                      <span key={index} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+        </section>
 
         <section id="contact">
           <h2>{content[language].contactTitle}</h2>
